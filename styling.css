@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+        box-sizing: border-box;
+}
+html, body{
+    height:100%;
+    width: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(back1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+
+
+
+/* nav bar menu started */
+#nav { 
+    background-color: #0E1123;
+    height: 27vh;
+    color: #E2AA50;
+    display: flex;          
+    justify-content: center; 
+    align-items: center;    
+}
+
+.img_logo img {
+    max-width: 200px;     
+    max-height: 100px;    
+    width: auto;          
+    height: auto;         
+}
+.menu {
+    display: flex;
+    list-style-type: none;
+    padding: 0; 
+    margin: 0; 
+}
+
+.menu li{
+    padding-left: 40px;
+}
+.menu li a{
+    display:inline-block;
+    text-decoration: none;
+    color:#E2AA50 ;
+    text-align: center;
+    transition: 0.15s;
+    position: relative;
+    text-transform: uppercase;
+     
+}
+.menu li a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width:0;
+    height: 1px;
+    background-color: #0E1123;
+    transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after{
+    width: 100%;
+}
+.open-menu,.close-menu{
+    position: absolute;
+    color: #E2AA50;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+.open_menu{
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.close-menu{
+    top: 20px;
+    right: 20px;
+}
+#check{display: none;}
+
+/* nav bar menu ended  */
+
+
+
+@media(max-width:768px){
+    .menu{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: #0E1123;
+        transition: all 0.15s ease-in-out;
+    }
+    .menu li{margin-top: 40px;}
+    .menu li a{padding: 10px;}
+    .open-menu,.close-menu{display: block;}
+    #check:checked ~ .menu{right: 0;}
+    #check:checked ~.open-menu{display: none;}
+
+    
+    .lines ul{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .banner-text{
+        font-size: small;
+    }
+    .join{
+        position: relative;
+        bottom: 0%;
+    }
+}
+/* qutoation writing css */
+#quote{
+    height: auto;
+    padding: 10%;
+    overflow: hidden;
+}
+#quote1{
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #E2AA50;
+    font-weight: 400;
+    font-size: 40px;
+    word-wrap: break-word;
+    overflow-wrap: break-word; 
+    line-height: 1.5; 
+}
+h5{
+    background-color: #0E1123;
+    color: #E2AA50;
+}
+/* quotation writing css ended */
+
+
+/*options started  */
+#option{
+    
+    background-color: #0E1123;
+    color: #E2AA50;
+    
+}
+
+.lines ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 0;
+    
+}
+.lines ul li img{
+    height: auto;
+    width:auto;
+
+}
+.box:hover{
+    transition: 0.5s;
+    transform: scale(1.15);
+    z-index: 2;
+}
+
+/* option css ended */
+
+/* whatsapp connection started */
+
+.banner-img{
+    position: relative;
+}
+.banner-img img{
+    width: 100%;
+    height: auto;
+}
+    
+.banner-text{
+    background-color: #0E1123;
+    color: #E2AA50;
+    font-size: 50px;
+    font-weight: bolder;
+    position: absolute;
+    top:15%;
+    margin-left: 50px;
+    word-break: break-word;
+    word-wrap: break-word;
+    line-height: 1.5;     
+    padding:10px;
+    margin-right: 100px;
+}
+.join{
+    background-color: #E2AA50;
+    color: #0E1123;
+    position:absolute;
+    top:45%;
+    font-size: 45px;
+    margin-left: 185px;
+    border-style:dotted;
+    
+}
+.join:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+/* whatsapp connection completed */
+
+
+
+/* last page started */
+#footer{
+    height: 60vh;
+    background-color: #0E1123;
+}
